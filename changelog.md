@@ -31,3 +31,21 @@ Date: 2025-05-07
 
 ### Fixed
 - Prevented duplicate entries from being added to the guessed states list.
+
+---
+
+## [0.3.0] - Exit Logic & Learning Feature
+Date: 2025-05-09
+
+### Added
+- Implemented "Exit" keyword to allow the user to end the game early.
+- Added logic to compare guessed states with full state list.
+- Generated `states_to_learn.csv` file containing unguessed states for further study.
+
+### Changed
+- Refined comments throughout the code for improved clarity and conciseness.
+- Replaced `.exitonclick()` with logic-driven loop termination using user input.
+
+### Notes
+- This update turns the game into a learning tool by providing feedback on missed states.
+- The CSV output can be used to build follow-up features, such as quiz review or repetition mode.
