@@ -6,12 +6,12 @@ screen = turtle.Screen()
 screen.title("U.S. States Game")
 
 # Load the U.S. map image
-image = "blank_states_img.gif"
+image = "assets/blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
 # Load state data from CSV and convert to list
-data = pandas.read_csv("50_states.csv")
+data = pandas.read_csv("assets/50_states.csv")
 all_states = data.state.to_list()
 guessed_states = []     # If user types "Exit", generate a list of missing states and save to CSV
 
