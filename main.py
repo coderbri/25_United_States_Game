@@ -26,12 +26,14 @@ while len(guessed_states) < 50:
 
     # If user types "Exit", generate a list of missing states and save to CSV
     if answer_state == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        missing_states = [state for state in all_states if state not in guessed_states]
+        # for state in all_states:
+        #     if state not in guessed_states:
+        #         missing_states.append(state)
+        print("Creating CSV file for unguessed states...")
         unguessed_states = pandas.DataFrame(missing_states)
         unguessed_states.to_csv("states_to_learn.csv")
+        print("CSV file created!")
         break
 
     # If guess is valid, record and display it on the map

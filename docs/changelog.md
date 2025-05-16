@@ -49,3 +49,17 @@ Date: 2025-05-09
 ### Notes
 - This update turns the game into a learning tool by providing feedback on missed states.
 - The CSV output can be used to build follow-up features, such as quiz review or repetition mode.
+
+---
+
+## [0.4.0] - Code Cleanup and List Comprehension Refactor  
+Date: 2025-05-16
+
+### Changed
+- Replaced loop-based logic for generating missing states with a more concise list comprehension.
+- Commented out previous loop implementation for reference during refactoring.
+- Cleaned up comments and organized code for better readability.
+- Updated path references to reflect new project structure (`assets/` directory).
+
+### Notes
+- List comprehension simplified the logic for comparing guessed and unguessed states.

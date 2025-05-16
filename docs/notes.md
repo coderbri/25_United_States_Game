@@ -18,3 +18,42 @@
 
 ### Tip
 When replacing `textinput()` with click-based input, you will need to use `turtle.mainloop()` or `screen.exitonclick()` to keep the game running and allow ongoing interaction.
+
+Yes, here’s a note in a similar style explaining your use of list comprehension in the U.S. States Game project:
+
+---
+
+## 🧠 Python Concept: List Comprehension for Cleaner Logic
+
+### What Changed?
+
+Instead of using a traditional loop to collect missing (unguessed) states, the logic was simplified using **list comprehension**.
+
+#### Before:
+```python
+missing_states = []
+for state in all_states:
+    if state not in guessed_states:
+        missing_states.append(state)
+```
+
+After:
+```python
+missing_states = [state for state in all_states if state not in guessed_states]
+```
+
+### Why Use List Comprehension?
+
+| Feature        | Benefit                                      |
+|----------------|----------------------------------------------|
+| Concise Syntax | One-liner replaces multiple lines of code    |
+| Readability    | Easier to understand when logic is simple    |
+| Performance    | Often slightly faster than traditional loops |
+| Pythonic Style | Preferred for straightforward transformations |
+
+**Tip**: Use list comprehension when the transformation is simple and easy to follow. For more complex logic or nested conditions, a traditional loop may be more readable.
+
+---
+<section align="center">
+  <code>coderBri © 2025</code>
+</section>
